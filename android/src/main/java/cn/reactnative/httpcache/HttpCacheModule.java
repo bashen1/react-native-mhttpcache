@@ -1,12 +1,6 @@
 package cn.reactnative.httpcache;
 
-import android.content.Intent;
-
 import com.facebook.cache.disk.DiskStorageCache;
-import com.facebook.cache.disk.FileCache;
-import com.facebook.drawee.backends.pipeline.Fresco;
-import com.facebook.imagepipeline.core.ImagePipelineFactory;
-import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
@@ -17,11 +11,7 @@ import okhttp3.Cache;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.ArrayList;
 
-/**
- * Created by tdzl2_000 on 2015-10-10.
- */
 public class HttpCacheModule extends ReactContextBaseJavaModule {
     public HttpCacheModule(ReactApplicationContext context) {
         super(context);
