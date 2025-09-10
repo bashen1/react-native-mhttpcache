@@ -1,14 +1,10 @@
 {
   "name": "react-native-mhttpcache",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Control http cache used by fetch/XMLHttpRequest",
   "main": "index.js",
   "scripts": {
     "test": "node node_modules/eslint/bin/eslint ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bashen1/react-native-http-cache-55valid.git"
   },
   "keywords": [
     "react-native",
@@ -20,14 +16,10 @@
   "author": "lehug",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bashen1/react-native-http-cache-55valid/issues"
+    "url": "https://github.com/bashen1/react-native-mhttpcache/issues"
   },
-  "homepage": "https://github.com/bashen1/react-native-http-cache-55valid#readme",
+  "homepage": "https://github.com/bashen1/react-native-mhttpcache#readme",
   "devDependencies": {
-    "babel-eslint": "^4.1.6",
-    "eslint": "^1.10.3",
-    "eslint-config-airbnb": "^2.1.1",
-    "eslint-plugin-import": "^0.12.1",
-    "eslint-plugin-react": "^3.13.1"
+    "react-native": ">=0.40"
   }
 }
