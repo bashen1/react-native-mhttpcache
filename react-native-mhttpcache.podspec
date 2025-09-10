@@ -12,11 +12,11 @@ Pod::Spec.new do |s|
   s.author        = package['author']
   s.platform      = :ios, "9.0"
   s.source        = { :git => "https://github.com/bashen1/react-native-http-cache-55valid.git", :tag => "master" }
-  s.source_files  = "ios/RCTHttpCache/**/*.{h,m}"
+  s.source_files  = "ios/**/*.{h,m}"
   s.resources     = ['*.bundle', '*.strings']
   s.requires_arc  = true
-  
-  s.dependency "React"
+
+  s.dependency "React-Core"
 
 end
 

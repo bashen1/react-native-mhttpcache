@@ -1,6 +1,3 @@
-/**
- * Created by tdzl2_000 on 2015-12-29.
- */
 import { NativeModules } from 'react-native';
 const native = NativeModules.HttpCache;
 
@@ -14,8 +11,6 @@ export const getImageCacheSize = native.getImageCacheSize;
 
 export async function getCacheSize(){
   const arr = await Promise.all([getHttpCacheSize(), getImageCacheSize()]);
-
-  // Get sum of all cache type.
   return arr.reduce((a,b)=>a+b, 0);
 }
 
