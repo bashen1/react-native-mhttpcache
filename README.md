@@ -1,79 +1,19 @@
+# react-native-mhttpcache
+
+[![npm version](https://badge.fury.io/js/react-native-mhttpcache.svg)](https://badge.fury.io/js/react-native-mhttpcache)
+
 React Native http cache control for both fetch/XMLHttpRequest and ImageView
 
 - [x] iOS
 - [x] Android
 
-## Installation
+## 安装
 
 ```sh
-$ npm install react-native-mhttpcache --save
+npm install react-native-mhttpcache --save
 ```
 
-## iOS: Linking in your XCode project
-
-- Link `react-native-mhttpcache` library from your `node_modules/react-native-mhttpcache/ios` folder like its
-  [described here](http://facebook.github.io/react-native/docs/linking-libraries-ios.html).
-  Don't forget to add it to "Build Phases" of project.
-
-## Android: Linking to your gradle Project
-
-- Add following lines into `android/settings.gradle`
-
-```
-include ':RCTHttpCache'
-project(':RCTHttpCache').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-mhttpcache/android')
-```
-
-- Add following lines into your `android/app/build.gradle` in section `dependencies`
-
-```
-...
-dependencies {
-   ...
-   compile project(':RCTHttpCache')    // Add this line only.
-}
-```
-
-- Add following lines into `MainApplication.java`
-
-```java
-...
-import cn.reactnative.httpcache.HttpCachePackage;
-      // Add this line before public class MainApplication
-
-public class MainApplication extends Application implements ReactApplication {
-
-  private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
-    @Override
-    protected boolean getUseDeveloperSupport() {
-      return BuildConfig.DEBUG;
-    }
-
-    @Override
-    protected List<ReactPackage> getPackages() {
-      return Arrays.<ReactPackage>asList(
-          new HttpCachePackage(), // Add this line
-          new MainReactPackage()
-      );
-    }
-  };
-
-  @Override
-  public ReactNativeHost getReactNativeHost() {
-      return mReactNativeHost;
-  }
-}
-```
-
-- Add these lines to 'proguard-rules.pro' if you need to minify your java code:
-
-```
--keep class com.facebook.cache.disk.DiskStorageCache {
-   private boolean maybeUpdateFileCacheSize();
-}
-```
-
-## JavaScript: import all and invoke!
+## 使用
 
 ```js
 import * as CacheManager from 'react-native-mhttpcache';
@@ -83,42 +23,28 @@ CacheManager.clear();
 
 ```
 
-## API Documentation
+## API 说明
 
-#### clear()
+### clear()
 
-Clear cache for all type.
+【Promise】清除所有缓存
 
-Return a promise which indicate the clear state.
+### getSize()
 
-#### getSize()
+【Promise】获取所有缓存大小（bytes）
 
-Get cache size for all type.
+### clearHttpCache()
 
-Return a promise that contain the cache size(in bytes).
+【Promise】清除 fetch/ajax 缓存
 
-#### clearHttpCache()
+### getHttpCacheSize()
 
-Clear cache for fetch/ajax only.
+【Promise】获取 fetch/ajax 缓存大小（bytes）
 
-Return a promise which indicate the clear state.
+### clearImageCache()
 
-#### getHttpCacheSize()
+【Promise】清除 ImageView 缓存
 
-Get cache size for fetch/ajax only.
+### getImageCacheSize()
 
-Return a promise that contain the cache size(in bytes).
-
-#### clearImageCache()
-
-Clear cache for ImageView only.
-
-Return a promise which indicate the clear state.
-
-#### getImageCacheSize()
-
-Get cache size for ImageView only.
-
-Return a promise that contain the cache size(in bytes).
-
-
+【Promise】获取 ImageView 缓存大小（bytes）
