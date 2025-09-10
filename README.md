@@ -4,6 +4,8 @@
 
 React Native http cache control for both fetch/XMLHttpRequest and ImageView
 
+本项目基于[react-native-http-cache](https://github.com/reactnativecn/react-native-http-cache)调整开发，感谢作者的贡献
+
 - [x] iOS
 - [x] Android
 
